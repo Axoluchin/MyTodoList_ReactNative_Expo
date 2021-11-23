@@ -23,6 +23,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor= {'white'} barStyle="dark-content"/>
+      <Text style={styles.tittle}>My Todo List</Text>
       <ScrollView>
         {Tareas.map((value, index) => {
           return (<Todo Texto={value} key={index}/>);
@@ -33,6 +34,7 @@ export default function App() {
           placeholder="Tarea nueva"
           style={styles.textinput}
           maxLength={50}
+          value={Texto}
           onChangeText={(value)=> setTexto(value)}
         />
         <TouchableOpacity style={styles.addTodo} onPress={() => newTarea()}>
@@ -51,13 +53,15 @@ const styles = StyleSheet.create({
   form: {
     flexDirection: "row",
     padding: 16,
-    borderTopWidth: 1,
-    borderColor: "#320FCC",
+    backgroundColor: "#BBF2FB",
     alignItems: "center",
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16
   },
   textinput: {
     flex: 1,
-    backgroundColor: '#C7C7C7',
+    borderBottomWidth: 1,
+    borderColor: 'gray',
     padding: 8,
     marginRight: 8,
     borderRadius: 4
@@ -66,5 +70,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#4398E7",
     padding: 8,
     borderRadius: 4,
+  },
+  tittle:{
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#4398E7',
+    fontSize: 50,
+    fontStyle:'italic',
+    textDecorationLine: 'underline'
   },
 });
