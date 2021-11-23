@@ -1,4 +1,4 @@
-# MyTodoList_ReactNative_Expo
+# MyTodoList en ReactNative con Expo
 Simple aplicación de Todo List en React Native con Expo
 
 ## Correr el proyecto 🚀
